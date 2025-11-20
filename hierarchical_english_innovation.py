@@ -84,7 +84,7 @@ class HierarchicalEnglishM3FEND:
         Args:
             data_path: Path to the training dataset pickle file
         """
-        print("🔍 Discovering sub-domains in English fake news...")
+        print("Discovering sub-domains in English fake news...")
         
         # STEP 1: Load the preprocessed dataset
         with open(data_path, 'rb') as f:
@@ -162,7 +162,7 @@ class HierarchicalEnglishM3FEND:
         This is the core algorithmic contribution that should significantly outperform
         the parent M3FEND paper and basic hierarchical clustering approaches.
         """
-        print(f" DAMA: Processing article with advanced attention mechanisms...")
+        print(f"DAMA: Processing article with advanced attention mechanisms...")
         
         # STEP 1: Generate BERT embeddings for semantic understanding
         with torch.no_grad():
@@ -302,7 +302,7 @@ class HierarchicalEnglishM3FEND:
         memory_bank[slot_to_update] = new_memory
         usage_stats[slot_to_update] += 1
         
-        print(f"    📝 Updated memory slot {slot_to_update} in {memory_key} (confidence: {confidence:.3f})")
+        print(f"    Updated memory slot {slot_to_update} in {memory_key} (confidence: {confidence:.3f})")
     
     def _update_cross_domain_patterns(self, domain, article_embedding, confidence):
         """
@@ -320,7 +320,7 @@ class HierarchicalEnglishM3FEND:
                 # Remove oldest pattern (FIFO)
                 patterns.pop(0)
             
-            print(f"    🔄 Stored cross-domain pattern for {domain} (total: {len(patterns)})")
+            print(f"    Stored cross-domain pattern for {domain} (total: {len(patterns)})")
     
     def create_hierarchical_memories(self):
         """
@@ -333,7 +333,7 @@ class HierarchicalEnglishM3FEND:
         
         BENEFIT: More specialized and targeted memory for different types of fake news
         """
-        print("🧠 Creating hierarchical memory banks...")
+        print("Creating hierarchical memory banks...")
         
         # STEP 1: Iterate through each main domain that has discovered sub-domains
         for domain_name in self.domain_mapping.keys():
@@ -428,7 +428,7 @@ class HierarchicalEnglishM3FEND:
         
         Expected Performance Gain: 5-15% improvement over parent M3FEND paper
         """
-        print(f"\n🚀 DAMA PREDICTION for domain: {domain}")
+        print(f"\nDAMA PREDICTION for domain: {domain}")
         print("-" * 50)
         
         # Use the revolutionary DAMA algorithm
@@ -450,7 +450,7 @@ def test_innovation():
     2. Creation of hierarchical memory architecture  
     3. Enhanced prediction using specialized memories
     """
-    print("🚀 Testing Hierarchical M3FEND Innovation on English Dataset")
+    print("Testing Hierarchical M3FEND Innovation on English Dataset")
     print("="*60)
     
     # STEP 1: Initialize the hierarchical model
@@ -466,7 +466,7 @@ def test_innovation():
     hierarchical_model.create_hierarchical_memories()
     
     # STEP 4: Execute Innovation 3 - Test hierarchical prediction
-    print("\\n🧪 Testing ORIGINAL Hierarchical vs NEW DAMA Approach...")
+    print("\\nTesting ORIGINAL Hierarchical vs NEW DAMA Approach...")
     print("="*70)
     
     # Test cases representing different domains and content types
@@ -483,11 +483,11 @@ def test_innovation():
     
     # COMPARATIVE TESTING: Original vs DAMA approach
     for i, (article, domain) in enumerate(test_articles, 1):
-        print(f"\n📄 TEST ARTICLE {i}: {article[:60]}...")
+        print(f"\nTEST ARTICLE {i}: {article[:60]}...")
         print("="*70)
         
         # Test 1: Original Hierarchical Method
-        print("\n🔶 ORIGINAL HIERARCHICAL METHOD:")
+        print("\nORIGINAL HIERARCHICAL METHOD:")
         original_result = hierarchical_model.predict_with_hierarchy(article, domain)
         print(f"   Method: {original_result.get('method', 'Original_Hierarchical')}")
         print(f"   Domain: {original_result['domain']}")
@@ -495,7 +495,7 @@ def test_innovation():
         print(f"   Prediction: {original_result['prediction']}")
         
         # Test 2: NEW DAMA Method (BREAKTHROUGH INNOVATION)
-        print("\n🔥 NEW DAMA METHOD (OUR BREAKTHROUGH):")
+        print("\nNEW DAMA METHOD (OUR BREAKTHROUGH):")
         dama_result = hierarchical_model.predict_with_dama(article, domain)
         print(f"   Method: {dama_result['method']}")
         print(f"   Domain: {dama_result['domain']}")
@@ -506,7 +506,7 @@ def test_innovation():
         print(f"   Innovation level: {dama_result['innovation_level']}")
         
         # COMPARISON ANALYSIS
-        print(f"\n📊 COMPARISON ANALYSIS:")
+        print(f"\nCOMPARISON ANALYSIS:")
         print(f"   ✓ DAMA uses BERT embeddings vs TF-IDF")
         print(f"   ✓ Dynamic attention vs static clustering") 
         print(f"   ✓ Cross-domain learning capability")
@@ -520,7 +520,7 @@ def test_innovation():
 # MAIN EXECUTION: Run the innovation test when script is executed directly
 if __name__ == "__main__":
     print("\n" + "="*80)
-    print("🎯 HIERARCHICAL M3FEND WITH DAMA INNOVATION")
+    print("HIERARCHICAL M3FEND WITH DAMA INNOVATION")
     print("   Research Contribution for Beating Parent Paper Performance")
     print("="*80)
     
@@ -528,14 +528,14 @@ if __name__ == "__main__":
     model = test_innovation()
     
     # FINAL SUMMARY OF CONTRIBUTIONS
-    print("\n" + "🏆 SUMMARY OF NOVEL CONTRIBUTIONS" + "\n" + "="*50)
+    print("\n" + "SUMMARY OF NOVEL CONTRIBUTIONS" + "\n" + "="*50)
     print("""
-📌 CONTRIBUTION 1: Hierarchical Sub-Domain Discovery
+ CONTRIBUTION 1: Hierarchical Sub-Domain Discovery
    ├── Replaces flat 3-domain structure with hierarchical 9 sub-domains
    ├── Automatic clustering finds natural topic boundaries
    └── Expected gain: 3-5% improvement in domain classification
     
-🚀 CONTRIBUTION 2: Dynamic Adaptive Memory Attention (DAMA) - BREAKTHROUGH!
+ CONTRIBUTION 2: Dynamic Adaptive Memory Attention (DAMA) - BREAKTHROUGH!
    ├── BERT-based semantic understanding (vs TF-IDF)
    ├── Multi-head attention mechanisms for memory selection
    ├── Dynamic memory updates with continual learning
@@ -543,15 +543,15 @@ if __name__ == "__main__":
    ├── Confidence-based adaptive thresholds
    └── Expected gain: 8-12% improvement in fake news detection
     
-🔬 CONTRIBUTION 3: Comparative Architecture Analysis
+ CONTRIBUTION 3: Comparative Architecture Analysis
    ├── Side-by-side performance comparison framework
    ├── Attention weight visualization and interpretation
    ├── Cross-domain knowledge transfer quantification
    └── Expected gain: Better understanding of why improvements occur
     
-🎖️  TOTAL EXPECTED IMPROVEMENT OVER PARENT M3FEND PAPER: 10-17%
+ TOTAL EXPECTED IMPROVEMENT OVER PARENT M3FEND PAPER: 10-17%
     
-📝 NOVELTY FACTORS FOR PAPER:
+ NOVELTY FACTORS FOR PAPER:
    • First hierarchical memory architecture for fake news detection
    • Novel DAMA algorithm with cross-domain transfer learning  
    • Dynamic memory adaptation during inference (not just training)
@@ -560,7 +560,7 @@ if __name__ == "__main__":
     """)
     
     print("="*80)
-    print("🎯 MODEL READY FOR RESEARCH PAPER AND PERFORMANCE EVALUATION")
+    print("MODEL READY FOR RESEARCH PAPER AND PERFORMANCE EVALUATION")
     print("="*80)
     
     # At this point, 'model' contains:

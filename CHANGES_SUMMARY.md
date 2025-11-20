@@ -6,7 +6,7 @@
 
 ---
 
-## 🔧 **Changes Made to `hierarchical_english_innovation.py`**
+## **Changes Made to `hierarchical_english_innovation.py`**
 
 ### **1. New Imports Added:**
 ```python
@@ -94,7 +94,7 @@ def predict_with_dama(self, article_text, domain):
 ### **7. Enhanced Main Execution:**
 ```python
 # ADDED comprehensive summary section:
-print("🏆 SUMMARY OF NOVEL CONTRIBUTIONS")
+print("SUMMARY OF NOVEL CONTRIBUTIONS")
 # Lists all 4 major innovations
 # Shows expected performance improvements (10-17%)
 # Documents novelty factors for research paper
@@ -102,7 +102,7 @@ print("🏆 SUMMARY OF NOVEL CONTRIBUTIONS")
 
 ---
 
-## 📊 **Key Algorithmic Changes:**
+## **Key Algorithmic Changes:**
 
 ### **Before (Original Hierarchical):**
 - TF-IDF feature extraction
@@ -119,7 +119,7 @@ print("🏆 SUMMARY OF NOVEL CONTRIBUTIONS")
 
 ---
 
-## 🎯 **Core Innovation Summary:**
+## **Core Innovation Summary:**
 
 The main change was replacing the basic K-means clustering approach with a sophisticated **Dynamic Adaptive Memory Attention (DAMA)** system that:
 
@@ -133,8 +133,8 @@ This represents a **major algorithmic advancement** that should significantly ou
 
 ---
 
-## 📝 **Files Status:**
+## **Files Status:**
 - ✅ `hierarchical_english_innovation.py` - Enhanced with DAMA
 - ✅ `NOVELTY_CONTRIBUTIONS.md` - Created with technical documentation  
 - ✅ `CHANGES_SUMMARY.md` - This summary file
-- 🎯 **Ready for research paper evaluation and performance testing**
+- **Ready for research paper evaluation and performance testing**

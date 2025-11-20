@@ -65,7 +65,7 @@ This document outlines the key novel contributions that go beyond the parent M3F
 
 ---
 
-## 🔬 **Technical Novelties for Research Paper**
+## **Technical Novelties for Research Paper**
 
 ### **1. Algorithmic Contributions**
 
@@ -178,7 +178,7 @@ Our DAMA Innovation: 9+ Adaptive Memory Banks
 
 ---
 
-## 🔧 **Implementation Status**
+## **Implementation Status**
 
  **Completed Innovations:**
 - Hierarchical sub-domain discovery

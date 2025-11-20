@@ -34,15 +34,14 @@ class HierarchicalEnglishM3FEND:
         """
         INNOVATION 1: Automatically discover sub-domains within each domain
         """
-        print("🔍 Discovering sub-domains in English fake news...")
+        print("Discovering sub-domains in English fake news...")
         
         with open(data_path, 'rb') as f:
             data = pickle.load(f)
         
         for domain_name, domain_id in self.domain_mapping.items():
             domain_data = data[data['category'] == domain_name]
-            print(f"
---- Analyzing {domain_name} ({len(domain_data)} articles) ---")
+            print(f"\n--- Analyzing {domain_name} ({len(domain_data)} articles) ---")
             
             if len(domain_data) < self.num_sub_domains:
                 continue
@@ -86,7 +85,7 @@ class HierarchicalEnglishM3FEND:
         Level 1: Domain memories (politics, entertainment, health)
         Level 2: Sub-domain memories (specific topics within each)
         """
-        print("🧠 Creating hierarchical memory banks...")
+        print("Creating hierarchical memory banks...")
         
         for domain_name in self.domain_mapping.keys():
             if domain_name in self.sub_domain_clusters:
@@ -133,7 +132,7 @@ def main():
     """
     Test your Hierarchical M3FEND innovation
     """
-    print("🚀 Testing Hierarchical M3FEND Innovation on English Dataset")
+    print("Testing Hierarchical M3FEND Innovation on English Dataset")
     print("="*60)
     
     # Initialize your innovation
@@ -146,8 +145,7 @@ def main():
     hierarchical_model.create_hierarchical_memories()
     
     # Step 3: Test prediction
-    print("
-🧪 Testing hierarchical prediction...")
+    print("\nTesting hierarchical prediction...")
     test_articles = [
         ("This new study shows COVID-19 affects mental health", "COVID"),
         ("Celebrity couple announces breakup after 2 years", "gossipcop"), 
@@ -184,41 +182,45 @@ if __name__ == "__main__":
                             np.mean(sub_domain_features, axis=0)
                         ).float()
 
-class HierarchicalM3FEND(nn.Module):
-    """
-    Enhanced M3FEND with hierarchical domain understanding
-    """
-    def __init__(self, original_m3fend):
-        super().__init__()
-        # Keep original M3FEND as base
-        self.base_model = original_m3fend
-        
-        # INNOVATION: Add hierarchical layer
-        self.hierarchical_memory = HierarchicalMemoryNetwork(
-            input_dim=original_m3fend.emb_dim,
-            emb_dim=original_m3fend.emb_dim,
-            domain_num=original_m3fend.domain_num
-        )
-        
-        # INNOVATION: Hierarchical fusion
-        self.hierarchy_fusion = nn.Linear(
-            original_m3fend.emb_dim * 2,  # original + hierarchical
-            original_m3fend.emb_dim
-        )
-    
-    def forward(self, **kwargs):
-        # Get original M3FEND features
-        base_features = self.base_model.get_features(**kwargs)  # You'd need to modify this
-        
-        # INNOVATION: Add hierarchical reasoning
-        hierarchical_features = self.hierarchical_memory(base_features, kwargs['category'])
-        
-        # Combine both levels
-        combined_features = torch.cat([base_features, hierarchical_features], dim=-1)
-        final_features = self.hierarchy_fusion(combined_features)
-        
-        # Final classification
-        return torch.sigmoid(self.base_model.classifier(final_features))
+# Note: HierarchicalM3FEND class would integrate with the main M3FEND model
+# This is a placeholder for the full integration implementation
+
+# class HierarchicalM3FEND(nn.Module):
+#     """
+#     Enhanced M3FEND with hierarchical domain understanding
+#     """
+#     def __init__(self, original_m3fend):
+#         super().__init__()
+#         # Keep original M3FEND as base
+#         self.base_model = original_m3fend
+#         
+#         # INNOVATION: Add hierarchical layer
+#         # self.hierarchical_memory = HierarchicalMemoryNetwork(
+#         #     input_dim=original_m3fend.emb_dim,
+#         #     emb_dim=original_m3fend.emb_dim,
+#         #     domain_num=original_m3fend.domain_num
+#         # )
+#         
+#         # INNOVATION: Hierarchical fusion
+#         self.hierarchy_fusion = nn.Linear(
+#             original_m3fend.emb_dim * 2,  # original + hierarchical
+#             original_m3fend.emb_dim
+#         )
+#     
+#     def forward(self, **kwargs):
+#         # Get original M3FEND features
+#         base_features = self.base_model.get_features(**kwargs)  # You'd need to modify this
+#         
+#         # INNOVATION: Add hierarchical reasoning
+#         # hierarchical_features = self.hierarchical_memory(base_features, kwargs['category'])
+#         
+#         # Combine both levels
+#         # combined_features = torch.cat([base_features, hierarchical_features], dim=-1)
+#         # final_features = self.hierarchy_fusion(combined_features)
+#         
+#         # Final classification
+#         # return torch.sigmoid(self.base_model.classifier(final_features))
+#         pass
 
 # INNOVATION BENEFITS:
 # 1. No new data collection needed
