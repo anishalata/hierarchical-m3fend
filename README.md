@@ -6,7 +6,7 @@ This repository extends M3FEND with **Hierarchical M3FEND**, which automatically
 
 ---
 
-## Quick Start for TAs / Evaluators
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
