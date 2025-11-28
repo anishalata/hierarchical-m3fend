@@ -2,12 +2,12 @@ import os
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_name', default='m3fend')#textcnn bigru bert eann eddfn mmoe mose dualemotion stylelstm mdfend
-parser.add_argument('--epoch', type=int, default=2)  # Reduced from 50 to 2 for testing
-parser.add_argument('--max_len', type=int, default=128)  # Reduced from 170 for faster loading
-parser.add_argument('--num_workers', type=int, default=2)  # Reduced from 4 for less overhead
+parser.add_argument('--epoch', type=int, default=50)  # Training epochs
+parser.add_argument('--max_len', type=int, default=128)  # Maximum sequence length
+parser.add_argument('--num_workers', type=int, default=4)  # Data loading workers
 parser.add_argument('--early_stop', type=int, default=3)
 parser.add_argument('--dataset', default='ch')# en
-parser.add_argument('--batchsize', type=int, default=16)  # Further reduced for faster loading
+parser.add_argument('--batchsize', type=int, default=16)  # Batch size
 parser.add_argument('--seed', type=int, default=2021)
 parser.add_argument('--gpu', default='0')
 parser.add_argument('--emb_dim', type=int, default=768)

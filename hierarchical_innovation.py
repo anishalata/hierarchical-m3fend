@@ -1,3 +1,7 @@
+# DEPRECATED: This is an older prototype version
+# Please use hierarchical_english_innovation.py instead, which includes the full DAMA implementation
+# This file is kept for reference only
+
 # Hierarchical M3FEND for English Dataset
 # Your Innovation: Automatic Sub-Domain Discovery
 

@@ -69,7 +69,7 @@ class Run():
     def get_dataloader(self):
         loader = bert_data(max_len = self.max_len, batch_size = self.batchsize,
                         category_dict = self.category_dict, num_workers=self.num_workers, 
-                        dataset = self.dataset, test_mode=True)  # Added test_mode=True
+                        dataset = self.dataset, test_mode=False)  # Set to False for full training
         train_loader = loader.load_data(self.train_path, True)
         val_loader = loader.load_data(self.val_path, False)
         test_loader = loader.load_data(self.test_path, False)

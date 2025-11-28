@@ -49,7 +49,7 @@ def process(x):
     
 
 class bert_data():
-    def __init__(self, max_len, batch_size, category_dict, dataset, num_workers=2, test_mode=True):
+    def __init__(self, max_len, batch_size, category_dict, dataset, num_workers=2, test_mode=False):
         self.max_len = max_len
         self.batch_size = batch_size
         self.num_workers = num_workers
@@ -60,7 +60,7 @@ class bert_data():
     def load_data(self, path, shuffle):
         self.data = df_filter(read_pkl(path), self.category_dict)
         if self.test_mode:
-            # Use just 10 samples for super fast testing
+            # Use just 10 samples for super fast testing (only if test_mode=True)
             sample_size = min(len(self.data), 10)
             self.data = self.data.sample(n=sample_size, random_state=42) if shuffle else self.data.head(sample_size)
         content = self.data['content'].to_numpy()

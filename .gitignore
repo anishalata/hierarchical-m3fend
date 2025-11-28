@@ -53,9 +53,13 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# Data files (too large for GitHub - over 100MB limit)
-*.pkl
-*.zip
+# Data files - included in repository
+# Note: data/en/train.pkl is 192MB, which exceeds GitHub's 100MB limit
+# If using Git LFS, uncomment the lines below to track large files
+# If not using Git LFS, you may need to exclude *.pkl and keep only *.zip files
+# See GIT_LFS_SETUP.md for instructions
+# *.pkl
+# *.zip
 
 # Logs
 logs/
