@@ -1,5 +1,17 @@
 import os
 import argparse
+<<<<<<< HEAD
+=======
+
+
+# Ensure all required folders exist
+os.makedirs("./logs", exist_ok=True)
+os.makedirs("./logs/json", exist_ok=True)
+os.makedirs("./logs/param", exist_ok=True)
+os.makedirs("./param_model", exist_ok=True)
+
+
+>>>>>>> 65275b1 (Add folder checks to main.py)
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_name', default='m3fend')#textcnn bigru bert eann eddfn mmoe mose dualemotion stylelstm mdfend
 parser.add_argument('--epoch', type=int, default=50)  # Training epochs
